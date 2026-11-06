@@ -314,6 +314,23 @@ footer b{color:rgba(250,244,235,.8)}
 .lb img{max-width:min(1000px,94vw);max-height:82vh;border:3px solid var(--paper);border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.5);object-fit:contain}
 .lb p{color:var(--paper);font-size:14px;font-weight:700;text-align:center}
 .lb .gclose{top:20px;right:22px;position:fixed}
+
+/* AI live */
+.live-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;background:var(--pink-soft);border:1px solid var(--pink);color:var(--pink-deep);border-radius:999px;padding:3px 12px;margin-bottom:10px}
+.live-metrics{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin:6px 0 18px}
+.live-metrics .lm{padding:20px 24px;border-left:1px solid var(--line)}
+.live-metrics .lm:first-child{border-left:none}
+.live-metrics .n{font-family:var(--serif);font-weight:900;font-size:clamp(24px,2.6vw,32px);line-height:1.2;color:var(--pink-deep)}
+.live-metrics .l{font-size:12.5px;color:var(--soft);margin-top:4px}
+@media(max-width:860px){.live-metrics{grid-template-columns:1fr}.live-metrics .lm{border-left:none;border-top:1px solid var(--line)}.live-metrics .lm:first-child{border-top:none}}
+
+/* AI live mini */
+.live-mini{display:grid;grid-template-columns:1fr 190px;gap:26px;align-items:center;background:var(--card);border:1.5px solid var(--ink);border-radius:20px;padding:22px 30px;margin-bottom:26px}
+.live-mini h3{font-family:var(--serif);font-weight:900;font-size:20px;margin-bottom:8px}
+.live-mini p{font-size:13.5px;color:var(--soft)}
+.live-mini p b{color:var(--ink)}
+.live-mini .phone{width:145px;transform:rotate(1.5deg);justify-self:center}
+@media(max-width:860px){.live-mini{grid-template-columns:1fr}.live-mini .phone{width:150px}}
 </style>
 <style data-trae-edit-ui="true" id="trae-previewer-tools-styles">:root {
   --trae-layer-image-download: 89990;
@@ -1954,9 +1971,9 @@ footer b { color: rgba(250, 244, 235, 0.8); }
       <a href="#about">关于我</a>
       <a href="#trade">外贸实习</a>
       <a href="#media">自媒体</a>
+      <a href="#ailive">AI 直播</a>
       <a href="#method">方法论</a>
-      <a href="#side">动手</a>
-      <a href="#campus">校园</a>
+      <a href="#side">动手</a> <a href="#campus">校园</a>
     </div>
     <a class="nav-cta" href="#contact">联系我</a>
   </div>
@@ -2193,14 +2210,70 @@ footer b { color: rgba(250, 244, 235, 0.8); }
   </div>
 </section>
 
-<!-- 04 方法论 -->
+<!-- 04 AI 直播 -->
+<section id="ailive">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="s-no">04</span>
+      <div><p class="s-en">AI LIVE · NEW PROJECT</p><h2>AI 虚拟主播｜让直播间自己跑</h2></div>
+      <span class="s-line"></span>
+      <p class="s-note">真人下班，布布上班。</p>
+    </div>
+    <p class="lead-line rv">账号做起来之后，我把直播也交给了 AI：用自己部署的语音克隆，加一套无人直播系统，让布布在抖音自己开播。现在跑三个版本——<b>布布版午夜情感陪聊</b>、<b>同框版熊友互动</b>、<b>一二版可爱卖萌陪聊</b>。从人设、声音、互动规则到开播，都是我一个人搭的。</p>
+
+    <div class="cold rv">
+      <div class="txt">
+        <span class="live-tag">单人版</span>
+        <h3>布布版｜午夜情感陪聊</h3>
+        <p>单人直播间，主打深夜陪伴。观众发弹幕、点歌、送礼物，布布用克隆的小熊声线实时接话；没人说话时她会自己找话，不会冷场。真人去睡觉，直播间还在。</p>
+        <p>互动不是一股脑全念：<b>礼物感谢优先，普通弹幕其次，新观众进场最后</b>——人多的时候不刷屏，重要的话不会被淹没。</p>
+        <div class="chips"><span>无人值守</span><span>实时弹幕</span><span>点歌</span><span>礼物感谢</span><span>克隆音色</span></div>
+      </div>
+      <div class="phones">
+        <div class="phone tl"><img src="assets/ai-bubu.webp" width="905" height="1529" loading="lazy" decoding="async" alt="布布版 AI 虚拟主播直播间：布布单人午夜陪聊"></div>
+      </div>
+    </div>
+
+    <div class="cold rv">
+      <div class="txt">
+        <span class="live-tag">双人版</span>
+        <h3>同框版｜一二 × 布布 熊友互动</h3>
+        <p>一二和布布同台。难点不是让两个角色都会说话，而是让它们<b>不抢话</b>。我给它们定了分工：一二负责制造事件，布布负责承接情绪；亲戚类话题固定由布布接，一二拆台或护短。</p>
+        <p>同框之后，直播内容从“一个人接弹幕”变成“两个人演日常”。观众不只是来看 AI，是来看这对 CP 今天又怎么了。</p>
+        <div class="chips"><span>双角色</span><span>CP 互动</span><span>话轮控制</span><span>双音色</span><span>礼物动画</span></div>
+      </div>
+      <div class="phones">
+        <div class="phone tl"><img src="assets/ai-duo-chat.webp" width="597" height="996" loading="lazy" decoding="async" alt="同框版直播间：一二和布布双角色同台互动"></div>
+        <div class="phone tr"><img src="assets/ai-duo-gift.webp" width="597" height="996" loading="lazy" decoding="async" alt="同框版直播间：观众送棒棒糖触发布布专属动画"></div>
+      </div>
+    </div>
+
+    <div class="live-mini rv">
+      <div class="txt">
+        <span class="live-tag">一二版</span>
+        <h3>一二版｜可爱卖萌陪聊</h3>
+        <p>一二单独出镜，性格软萌可爱，主打<b>卖萌和轻松陪聊</b>。布布版偏深夜情绪陪伴，一二版更轻更甜。</p>
+      </div>
+      <div class="phone"><img src="assets/ai-yier.webp" width="720" height="1600" loading="lazy" decoding="async" alt="一二版 AI 虚拟主播直播间：一二单人卖萌陪聊"></div>
+    </div>
+
+    <div class="live-metrics rv">
+      <div class="lm"><div class="n">5.7 万+</div><div class="l">单场互动事件 · 聊天 15300 / 进场 39900 / 礼物 1800</div></div>
+      <div class="lm"><div class="n">23 小时</div><div class="l">连续无人直播零故障 · 语音合成 8000+ 次</div></div>
+      <div class="lm"><div class="n">4000+</div><div class="l">四天涨粉 · AI 直播 + AI 陪聊</div></div>
+    </div>
+    <p class="lead-line rv" style="margin-top:4px">这套东西现在还在跑。技术是底座，真正值钱的是把直播这件事拆成一套<b>可复用的互动规则</b>。</p>
+  </div>
+</section>
+
+<!-- 05 方法论 -->
 <section id="method">
   <div class="wrap">
     <div class="shead rv in">
-      <span class="s-no">04</span>
+      <span class="s-no">05</span>
       <div><p class="s-en">METHOD · TRANSFERABLE</p><h2>方法论｜我的「运营公式」</h2></div>
       <span class="s-line"></span>
-      <p class="s-note">换个账号、换个品类，这套照样能用。</p>
+      <p class="s-note">短视频、直播，底层是同一套公式。</p>
     </div>
     <div class="m-row rv in">
       <span class="fno">F1</span>
@@ -2220,16 +2293,16 @@ footer b { color: rgba(250, 244, 235, 0.8); }
   </div>
 </section>
 
-<!-- 05 动手 -->
+<!-- 06 动手 -->
 <section id="side">
   <div class="wrap">
     <div class="shead rv in">
-      <span class="s-no">05</span>
+      <span class="s-no">06</span>
       <div><p class="s-en">SIDE PROJECTS · BUILD</p><h2>动手｜我甚至自己做了工具</h2></div>
       <span class="s-line"></span>
       <p class="s-note">学到能用，才算学会。</p>
     </div>
-    <p class="lead-line rv in">做内容做到后来，我不满足于只用现成的工具。</p>
+    <p class="lead-line rv in">AI 直播里布布的声音，最早就是从这里来的。做内容做到后来，我不满足于只用现成的工具。</p>
     <div class="cold rv in">
       <div class="txt">
         <h3>「一二布布 AI 语音合成」</h3>
@@ -2264,11 +2337,12 @@ footer b { color: rgba(250, 244, 235, 0.8); }
   </div>
 </section>
 
-<!-- 06 校园 -->
+
+<!-- 07 校园 -->
 <section id="campus">
   <div class="wrap">
     <div class="shead rv in">
-      <span class="s-no">06</span>
+      <span class="s-no">07</span>
       <div><p class="s-en">CAMPUS · EVIDENCE</p><h2>校园经历｜补充佐证</h2></div>
       <span class="s-line"></span>
       <p class="s-note">内容这件事，从校园就开始练了。</p>
@@ -2329,11 +2403,11 @@ footer b { color: rgba(250, 244, 235, 0.8); }
   </div>
 </section>
 
-<!-- 06 技能与联系 -->
+<!-- 08 技能与联系 -->
 <section id="skills" style="padding-top:92px">
   <div class="wrap">
     <div class="shead rv in">
-      <span class="s-no">07</span>
+      <span class="s-no">08</span>
       <div><p class="s-en">SKILLS &amp; CONTACT</p><h2>技能与联系</h2></div>
       <span class="s-line"></span>
     </div>
