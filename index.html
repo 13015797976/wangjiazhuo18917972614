@@ -3,8 +3,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>王佳卓 · 懂产品懂供应链、还会做内容的跨境电商运营人</title>
-<meta name="description" content="王佳卓个人作品集：纺织工程 × 外贸实操 × 自媒体爆款，四条百万播放爆款，一个月冷启动，品牌软广独立变现。">
-<link rel="preload" as="image" href="assets/portrait.jpg">
+<meta name="description" content="王佳卓个人作品集：纺织工程 × 外贸实操 × 自媒体爆款，五条爆款、四条百万播放（最高 255.8 万），AI 无人直播单日 1.5 万音浪，一个月冷启动，品牌软广独立变现。">
+<link rel="preload" as="image" href="assets/img-01.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600..900;1,9..144,600..900&amp;family=Noto+Serif+SC:wght@700;900&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media=\'all\'">
@@ -77,13 +77,14 @@ h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:5px;height:11px
 
 /* data band */
 .data-strip{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin-top:64px}
-.data-in{display:grid;grid-template-columns:repeat(3,1fr)}
-.data-cell{padding:24px 26px;border-left:1px solid var(--line)}
+.data-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.data-cell{padding:24px 22px;border-left:1px solid var(--line)}
 .data-cell:first-child{border-left:none}
 .data-cell .tag{font-size:12px;letter-spacing:.24em;font-weight:700;color:var(--pink-deep);margin-bottom:6px}
 .data-cell .num{font-family:var(--serif);font-weight:900;font-size:clamp(24px,2.6vw,34px);line-height:1.2}
 .data-cell .num i{font-style:italic;color:var(--pink-deep)}
 .data-cell .lab{font-size:13px;color:var(--soft);margin-top:4px}
+@media(max-width:960px){.data-in{grid-template-columns:repeat(2,1fr)}.data-cell{border-left:none;border-top:1px solid var(--line)}.data-cell:nth-child(even){border-left:1px solid var(--line)}.data-cell:nth-child(-n+2){border-top:none}}
 @media(max-width:860px){.data-in{grid-template-columns:1fr}.data-cell{border-left:none;border-top:1px solid var(--line)}.data-cell:first-child{border-top:none}}
 
 /* marquee */
@@ -161,8 +162,10 @@ section{padding:92px 0 0}
 .viral-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:26px}
 .v-card{background:var(--card);border:1.5px solid var(--ink);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
 .v-card:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--pink-soft)}
-.v-card .imgbox{height:330px;overflow:hidden;border-bottom:1.5px solid var(--ink);background:var(--cream)}
+.v-card .imgbox{height:330px;overflow:hidden;border-bottom:1.5px solid var(--ink);background:var(--cream);position:relative}
 .v-card .imgbox img{width:100%;height:100%;object-fit:cover;object-position:top}
+.v-card .imgbox .series{position:absolute;top:12px;left:12px;z-index:1;background:var(--ink);color:var(--paper);font-size:12px;font-weight:700;letter-spacing:.05em;padding:5px 12px;border-radius:999px;box-shadow:3px 3px 0 rgba(42,33,25,.18)}
+.v-card .imgbox .series.hot{background:var(--pink)}
 .v-card .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
 .v-card h3{font-family:var(--serif);font-weight:900;font-size:20px}
 .v-card .data{font-family:var(--serif);font-style:italic;font-weight:900;font-size:26px;color:var(--pink-deep);line-height:1.1}
@@ -317,11 +320,19 @@ footer b{color:rgba(250,244,235,.8)}
 
 /* AI live */
 .live-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;background:var(--pink-soft);border:1px solid var(--pink);color:var(--pink-deep);border-radius:999px;padding:3px 12px;margin-bottom:10px}
+.live-tag.hot{background:var(--pink);border-color:var(--pink);color:#fff}
+.cold.fresh{background:var(--pink-soft)}
+.fresh-stats{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 16px}
+.fresh-stats .fs{background:#fff;border:1.5px solid var(--pink);border-radius:14px;padding:10px 16px;min-width:104px;box-shadow:3px 3px 0 rgba(231,95,135,.14)}
+.fresh-stats .n{display:block;font-family:var(--serif);font-style:italic;font-weight:900;font-size:22px;color:var(--pink-deep);line-height:1.15}
+.fresh-stats .l{display:block;font-size:12px;color:var(--soft);margin-top:2px}
 .live-metrics{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin:6px 0 18px}
 .live-metrics .lm{padding:20px 24px;border-left:1px solid var(--line)}
-.live-metrics .lm:first-child{border-left:none}
+.live-metrics .lm:nth-child(3n+1){border-left:none}
+.live-metrics .lm:nth-child(n+4){border-top:1px solid var(--line)}
 .live-metrics .n{font-family:var(--serif);font-weight:900;font-size:clamp(24px,2.6vw,32px);line-height:1.2;color:var(--pink-deep)}
 .live-metrics .l{font-size:12.5px;color:var(--soft);margin-top:4px}
+@media(max-width:960px){.live-metrics{grid-template-columns:repeat(2,1fr)}.live-metrics .lm:nth-child(3n+1){border-left:1px solid var(--line)}.live-metrics .lm:nth-child(2n+1){border-left:none}.live-metrics .lm:nth-child(n+3){border-top:1px solid var(--line)}.live-metrics .lm:nth-child(n+4){border-top:1px solid var(--line)}}
 @media(max-width:860px){.live-metrics{grid-template-columns:1fr}.live-metrics .lm{border-left:none;border-top:1px solid var(--line)}.live-metrics .lm:first-child{border-top:none}}
 
 /* AI live mini */
@@ -1986,7 +1997,7 @@ footer b { color: rgba(250, 244, 235, 0.8); }
       <div>
         <p class="eyebrow rv in">PORTFOLIO 2026 · 跨境电商运营</p>
         <h1 class="rv in" style="--d:.06s">懂产品、懂供应链，<br>还会做<span class="hl">内容</span>。</h1>
-        <p class="hero-sub rv in" style="--d:.12s">我是<b>王佳卓</b>。学纺织工程，跑过外贸订单，用一个暑假把账号从 0 做到四条百万播放。看得懂面料，跟得下订单，也做得出让人停下手指的内容。</p>
+        <p class="hero-sub rv in" style="--d:.12s">我是<b>王佳卓</b>。学纺织工程，跑过外贸订单，把一个账号从 0 做到 26.9 万获赞，跑出五条爆款，还让 AI 直播间自己开播赚钱。看得懂面料，跟得下订单，也做得出让人停下手指的内容。</p>
         <div class="hero-cta rv in" style="--d:.18s">
           <a class="btn btn-solid" href="#trade">看我的差异化 ↓</a>
           <a class="btn btn-line" href="#contact">联系我</a>
@@ -1994,7 +2005,7 @@ footer b { color: rgba(250, 244, 235, 0.8); }
       </div>
       <div class="hero-visual rv in" style="--d:.15s">
         <div class="arch"><img decoding="async" src="assets/img-01.webp" width="810" height="1440" fetchpriority="high" alt="王佳卓生活照"></div>
-        <div class="sticker s1">最高单条 230 万<small>4 条百万播放爆款</small></div>
+        <div class="sticker s1">最高单条 255.8 万<small>5 条爆款 · 4 条百万播放</small></div>
         <div class="sticker s2">样品交付及时率 98%<small>外贸全流程实操</small></div>
       </div>
     </div>
@@ -2003,13 +2014,18 @@ footer b { color: rgba(250, 244, 235, 0.8); }
       <div class="data-in">
         <div class="data-cell">
           <div class="tag">自媒体</div>
-          <div class="num">4 条百万播放爆款 <i>/ 最高 230 万</i></div>
-          <div class="lab">抖音 + 小红书，从策划到剪辑都是我一个人</div>
+          <div class="num">5 条爆款 <i>/ 最高 255.8 万</i></div>
+          <div class="lab">4 条百万播放 · 「收拾」系列连出两条</div>
         </div>
         <div class="data-cell">
           <div class="tag">账号</div>
-          <div class="num">双平台粉丝 <i>10542</i></div>
-          <div class="lab">抖音 8991 · 小红书 1551 ｜ 获赞 22.1 万 · 赞藏 3.3 万</div>
+          <div class="num">获赞 <i>26.9 万</i></div>
+          <div class="lab">抖音 1.2 万粉 · 小红书 1551 粉 ｜ 赞藏 3.3 万</div>
+        </div>
+        <div class="data-cell">
+          <div class="tag">AI 直播</div>
+          <div class="num">单日 <i>1.5 万音浪</i></div>
+          <div class="lab">2.5 万观众 · 新增粉丝 314 ｜ 日均开播 13 小时</div>
         </div>
         <div class="data-cell">
           <div class="tag">变现</div>
@@ -2052,7 +2068,7 @@ footer b { color: rgba(250, 244, 235, 0.8); }
       <div class="step rv in" style="--d:.16s">
         <span class="layer">流量层</span>
         <h3>自媒体 · 会做内容，也会赚钱</h3>
-        <p>「一二布布幼稚园」从 0 做起，四条百万播放，橱窗加软广把变现也跑通了。内容能做大，也能赚钱。</p>
+        <p>「一二布布幼稚园」从 0 做起，五条爆款、四条百万播放；顺手搭的 AI 无人直播，单日 1.5 万音浪。橱窗加软广把变现也跑通了——内容能做大，也能赚钱。</p>
       </div>
       <div class="step rv in" style="--d:.24s">
         <span class="layer">愿景</span>
@@ -2119,26 +2135,26 @@ footer b { color: rgba(250, 244, 235, 0.8); }
       <div class="txt">
         <h3>先说这个账号是什么</h3>
         <p>「一二布布幼稚园」是我独立运营的情侣IP账号——原创是 @黄小B 的「一二布布」，我经授权做二创。人设是<b>“记录小熊情侣搞笑日常的幼稚园”</b>，更新搞笑日常和治愈小剧场，也接粉丝投稿。</p>
-        <p>起号第一个月我做了四件事：定人设、改主页、搭视觉、分合集。第一个月抖音涨粉 3080、获赞 12.6 万，小红书涨粉 960、赞藏 1.5 万；现在抖音 8991 粉、获赞 22.1 万，小红书 1551 粉、赞藏 3.3 万。累计发了 <b>103 条作品</b>，橱窗挂了 <b>73 件好物</b>。</p><p>第三个月，我利用自己做的 AI 无人直播、AI 陪聊，四天内涨粉 4000+。</p>
+        <p>起号第一个月我做了四件事：定人设、改主页、搭视觉、分合集。第一个月抖音涨粉 3080、获赞 12.6 万，小红书涨粉 960、赞藏 1.5 万；现在抖音 1.2 万粉、获赞 26.9 万，小红书 1551 粉、赞藏 3.3 万。累计发了 <b>100+ 条作品</b>，橱窗挂了 <b>73 件好物</b>。</p><p>第三个月，我利用自己做的 AI 无人直播、AI 陪聊，四天内涨粉 4000+；现在直播间日均开播 13 小时，单日最高 1.5 万音浪。</p>
         <div class="chips"><span>人设定位</span><span>主页包装</span><span>合集搭建</span><span>双平台规则</span><span>粉丝投稿渠道</span></div>
       </div>
       <div class="phones">
-        <div class="phone tl"><img src="assets/img-02.webp" width="720" height="1600" loading="lazy" decoding="async" alt="抖音账号主页：22.1万获赞 8991粉丝"></div>
+        <div class="phone tl"><img src="assets/img-28.webp" width="900" height="2000" loading="lazy" decoding="async" alt="抖音账号主页：26.9万获赞 1.2万粉丝"></div>
         <div class="phone tr"><img src="assets/img-03.webp" width="720" height="1600" loading="lazy" decoding="async" alt="小红书账号主页：1551粉丝 3.3万获赞与收藏"></div>
       </div>
     </div>
 
-    <p class="lead-line rv in">最拿得出手的是四条爆款。<b>公式不是想出来的，是一条一条试出来的：</b><span class="swipe-hint">← 左右滑动查看 →</span></p>
+    <p class="lead-line rv in">最拿得出手的是四条百万播放爆款——「收拾」系列连出两条，第二条还在长。<b>公式不是想出来的，是一条一条试出来的：</b><span class="swipe-hint">← 左右滑动查看 →</span></p>
 
     <div class="viral-wrap">
       <button class="v-arrow prev" aria-label="上一条爆款">←</button>
       <button class="v-arrow next" aria-label="下一条爆款">→</button>
       <div class="viral-track">
       <article class="v-card rv in" style="--d:.16s">
-        <div class="imgbox"><img src="assets/img-06.webp" width="520" height="1155" loading="lazy" decoding="async" alt="「当男熊友被我收拾了一顿后」作品截图：布布趴在床上委屈哼唧"></div>
+        <div class="imgbox"><span class="series">收拾系列 ①</span><img src="assets/img-27.webp" width="900" height="2000" loading="lazy" decoding="async" alt="「当男熊友被我收拾了一顿后」作品截图：布布趴在床上委屈哼唧，255.8万浏览"></div>
         <div class="body">
           <h3>当男熊友被我收拾了一顿后</h3>
-          <div class="data">230 万<small>播放 ｜ 抖音点赞 5.1 万</small></div>
+          <div class="data">255.8 万<small>播放 ｜ 抖音点赞 6.0 万 · 收藏 7230 · 评论 2934</small></div>
           <p class="desc">一二把男熊友“收拾”了一顿，布布趴在床上一脸委屈，嘴上还“哼唧”。情侣间的小别扭谁都经历过，评论区很快变成“同款男友”故事会。</p>
           <div class="formula"><b>共鸣场景 + 角色反差 + 评论区晒经历</b></div>
         </div>
@@ -2150,14 +2166,6 @@ footer b { color: rgba(250, 244, 235, 0.8); }
           <p class="desc">形式是<b>“捡到了一二的手机”</b>，整篇是微信聊天截图：“布布，我在公司受委屈了”“布布，晚上开黑走起”。偷窥感加金钱梗，第一条就破圈。</p>
           <div class="formula"><b>冲突前置 + 金钱梗 + 社交货币</b> — 聊天截图形态高沉浸</div>
         </div>
-      </article><article class="v-card rv in" style="--d:.24s">
-        <div class="imgbox"><img src="assets/img-07.webp" width="413" height="866" loading="lazy" decoding="async" alt="情侣IP大集合作品截图：四大顶流情侣IP"></div>
-        <div class="body">
-          <h3>情侣IP 大集合</h3>
-          <div class="data">160.9 万<small>播放 ｜ 抖音点赞 2.8 万</small></div>
-          <p class="desc">把当时最火的四对情侣IP——<b>线条小狗、蜜桃灰灰、噜噜噜妹、一二布布</b>——放一屏，问“你是哪个流派？”评论区立刻站队、拉人、吵起来。</p>
-          <div class="formula"><b>抛问题引互动</b> — 让用户站队，评论自己长出来</div>
-        </div>
       </article><article class="v-card lead rv in">
         <div class="imgbox"><img src="assets/img-04.webp" width="416" height="866" loading="lazy" decoding="async" alt="灯神系列作品截图：布布擦亮捡来的神灯"></div>
         <div class="body">
@@ -2166,7 +2174,35 @@ footer b { color: rgba(250, 244, 235, 0.8); }
           <p class="desc">布布擦亮捡来的神灯，灯神说能实现三个愿望，愿望是<b>“我希望世界上没有贪污腐败”</b>——小熊愣住，评论区炸了。先轻松、再抛议题、再反转、最后留白，评论区会自己讨论起来。</p>
           <div class="formula"><b>情绪曲线</b> — 轻松铺垫 → 社会议题 → 反转 → 角色反差留白</div>
         </div>
+      </article><article class="v-card rv in" style="--d:.24s">
+        <div class="imgbox"><img src="assets/img-07.webp" width="413" height="866" loading="lazy" decoding="async" alt="情侣IP大集合作品截图：四大顶流情侣IP"></div>
+        <div class="body">
+          <h3>情侣IP 大集合</h3>
+          <div class="data">168.0 万<small>播放 ｜ 抖音点赞 2.8 万+</small></div>
+          <p class="desc">把当时最火的四对情侣IP——<b>线条小狗、蜜桃灰灰、噜噜噜妹、一二布布</b>——放一屏，问“你是哪个流派？”评论区立刻站队、拉人、吵起来。</p>
+          <div class="formula"><b>抛问题引互动</b> — 让用户站队，评论自己长出来</div>
+        </div>
       </article>
+      </div>
+    </div>
+
+    <div class="cold fresh rv in">
+      <div class="txt">
+        <span class="live-tag hot">发布不到一天 · 还在长</span>
+        <h3>当女熊友被我收拾了一顿后 — 收拾系列 ②</h3>
+        <p>男版爆完，我立刻做了这条<b>角色反转篇</b>：被“收拾”的换成女熊友，委屈换成不服，同样的卧室、同样的哼唧音效。不是再赌一条新选题，而是验证——<b>这条路径能不能复制</b>。</p>
+        <p>发布不到一天，播放已经冲到 92.4 万、点赞 2 万，评论区照样一排“同款现场”。同一套公式跑通两次，「收拾」系列就是我的第二条爆款产线。</p>
+        <div class="fresh-stats">
+          <div class="fs"><span class="n">92.4 万</span><span class="l">播放 · 不到一天</span></div>
+          <div class="fs"><span class="n">2.0 万</span><span class="l">点赞</span></div>
+          <div class="fs"><span class="n">2893</span><span class="l">收藏</span></div>
+          <div class="fs"><span class="n">1020</span><span class="l">评论</span></div>
+        </div>
+        <div class="formula"><b>同路径复制</b> — 跑通的选题马上做反转篇：单条爆款是运气，能复制才是能力</div>
+        <div class="chips"><span>角色反转</span><span>系列化选题</span><span>当天跟进热点</span><span>评论区晒经历</span></div>
+      </div>
+      <div class="phones">
+        <div class="phone tl"><img src="assets/img-26.webp" width="900" height="2000" loading="lazy" decoding="async" alt="「当女熊友被我收拾了一顿后」作品截图：女熊友趴在床上，发布不到一天92.4万浏览"></div>
       </div>
     </div>
 
@@ -2219,7 +2255,30 @@ footer b { color: rgba(250, 244, 235, 0.8); }
       <span class="s-line"></span>
       <p class="s-note">真人下班，布布上班。</p>
     </div>
-    <p class="lead-line rv">账号做起来之后，我把直播也交给了 AI：用自己部署的语音克隆，加一套无人直播系统，让布布在抖音自己开播。现在跑三个版本——<b>布布版午夜情感陪聊</b>、<b>同框版熊友互动</b>、<b>一二版可爱卖萌陪聊</b>。从人设、声音、互动规则到开播，都是我一个人搭的。</p>
+    <p class="lead-line rv">账号做起来之后，我把直播也交给了 AI：用自己部署的语音克隆，加一套无人直播系统，让布布在抖音自己开播。现在跑三个版本——<b>布布版午夜情感陪聊</b>、<b>同框版熊友互动</b>、<b>一二版可爱卖萌陪聊</b>。从人设、声音、互动规则到开播，都是我一个人搭的。10 月 31 日首播到现在，直播间日均播 13 小时——它不只是能跑，是真的能赚。</p>
+
+    <div class="cold rv">
+      <div class="txt">
+        <span class="live-tag">后台战绩</span>
+        <h3>主播中心交出来的成绩单</h3>
+        <p>这是抖音主播中心的后台：单日开播 1229 分钟，<b>收获音浪 1.5 万、观众 2.5 万、新增粉丝 314</b>；另一场开播 515 分钟，音浪 5103、新增粉丝 83。没人值守，直播间自己完成欢迎、互动、点歌、礼物答谢。</p>
+        <p>音浪是真金白银的礼物分成。对运营来说，这不是一个技术 demo，是一条<b>自己会跑的变现通道</b>。</p>
+        <div class="chips"><span>日均开播 13 小时</span><span>首播 2026.10.31</span><span>单日 1.5 万音浪</span><span>观众 2.5 万 / 新增粉 314</span></div>
+      </div>
+      <div class="phones">
+        <div class="phone tl"><img src="assets/live-1.webp" width="900" height="2000" loading="lazy" decoding="async" alt="抖音主播中心后台：单日收获音浪1.5万、观众2.5万、新增粉丝314、开播1229分钟"></div>
+        <div class="phone tr"><img src="assets/live-2.webp" width="900" height="2000" loading="lazy" decoding="async" alt="抖音主播中心后台：单场开播515分钟、收获音浪5103、新增粉丝83"></div>
+      </div>
+    </div>
+
+    <div class="live-metrics rv">
+      <div class="lm"><div class="n">1.5 万</div><div class="l">单日收获音浪 · 观众 2.5 万 / 新增粉丝 314</div></div>
+      <div class="lm"><div class="n">13 小时</div><div class="l">日均开播时长 · 10.31 首播至今持续在跑</div></div>
+      <div class="lm"><div class="n">5103</div><div class="l">单场音浪 · 开播 515 分钟 · 新增粉丝 83</div></div>
+      <div class="lm"><div class="n">5.7 万+</div><div class="l">单场互动事件 · 聊天 15300 / 进场 39900 / 礼物 1800</div></div>
+      <div class="lm"><div class="n">23 小时</div><div class="l">连续无人直播零故障 · 语音合成 8000+ 次</div></div>
+      <div class="lm"><div class="n">4000+</div><div class="l">四天涨粉 · AI 直播 + AI 陪聊</div></div>
+    </div>
 
     <div class="cold rv">
       <div class="txt">
@@ -2257,11 +2316,6 @@ footer b { color: rgba(250, 244, 235, 0.8); }
       <div class="phone"><img src="assets/ai-yier.webp" width="720" height="1600" loading="lazy" decoding="async" alt="一二版 AI 虚拟主播直播间：一二单人卖萌陪聊"></div>
     </div>
 
-    <div class="live-metrics rv">
-      <div class="lm"><div class="n">5.7 万+</div><div class="l">单场互动事件 · 聊天 15300 / 进场 39900 / 礼物 1800</div></div>
-      <div class="lm"><div class="n">23 小时</div><div class="l">连续无人直播零故障 · 语音合成 8000+ 次</div></div>
-      <div class="lm"><div class="n">4000+</div><div class="l">四天涨粉 · AI 直播 + AI 陪聊</div></div>
-    </div>
     <p class="lead-line rv" style="margin-top:4px">这套东西现在还在跑。技术是底座，真正值钱的是把直播这件事拆成一套<b>可复用的互动规则</b>。</p>
   </div>
 </section>
@@ -2278,7 +2332,7 @@ footer b { color: rgba(250, 244, 235, 0.8); }
     <div class="m-row rv in">
       <span class="fno">F1</span>
       <div><h3>选题</h3><p class="flow"><b>开头钩子</b><span class="ar">+</span><b>内容反转</b><span class="ar">→</span>引爆</p></div>
-      <span class="res">4 条百万爆款验证</span>
+      <span class="res">5 条爆款 · 4 条百万播放验证</span>
     </div>
     <div class="m-row rv in" style="--d:.08s">
       <span class="fno">F2</span>
